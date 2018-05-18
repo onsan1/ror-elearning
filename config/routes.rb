@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   get  '/contact', to: 'static_pages#contact'
   get  '/signup',  to: 'users#new'
   post  '/signup',  to: 'users#create'
+
+  get  '/login',  to: 'sessions#new'
+  post '/login',  to: 'sessions#create'
+  delate '/logout',  to:'sessions#destroy'
  
   resources :users
 end
