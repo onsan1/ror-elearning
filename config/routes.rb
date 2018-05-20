@@ -7,15 +7,15 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
 
  
-  get  '/help',    to: 'static_pages#help', as: 'help'
-  get  '/about',   to: 'static_pages#about'
+  get  '/help',   to: 'static_pages#help', as: 'help'
+  get  '/about',  to: 'static_pages#about'
   get  '/contact', to: 'static_pages#contact'
   get  '/signup',  to: 'users#new'
   post  '/signup',  to: 'users#create'
 
   get  '/login',  to: 'sessions#new'
   post '/login',  to: 'sessions#create'
-  delate '/logout',  to:'sessions#destroy'
+  delete  '/logout',  to: "session#destroy"
  
   resources :users
 end
